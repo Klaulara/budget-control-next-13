@@ -14,6 +14,7 @@ export const getListBudgets = async () => {
 };
 
 export const addBudget = async (data) => {
+  data.status = "active";
   return await axiosInternal
     .post(budget_url, data)
     .then((res) => {
