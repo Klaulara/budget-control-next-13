@@ -8,38 +8,23 @@ import icon from "../../../public/icons/iconCompany.svg";
 import dashboard from "../../../public/icons/dashboard.svg";
 import users from "../../../public/icons/users.svg";
 import iconUp from "../../../public/icons/iconUp.svg";
-import message from "../../../public/icons/message.svg";
 import security from "../../../public/icons/security.svg";
 import settings from "../../../public/icons/settings.svg";
 import notifications from "../../../public/icons/notifications.svg";
-import password from "../../../public/icons/password.svg";
-import goals from "../../../public/icons/goals.svg";
 import config from "../../../public/icons/config.svg";
 
 const SideBar = () => {
 
-  const [firstMenu, setFirstMenu] = useState(false);
-  const [secondMenu, setSecondMenu] = useState(false);
-  const [thirdMenu, setThirdMenu] = useState(false);
+  const [firstMenu, setFirstMenu] = useState(true);
 
   const showFirstMenu = () => {
     let icon1 = document.getElementById("icon1");
     if(firstMenu === false){
       setFirstMenu(true);
-      icon1.style.transform = "rotate(180deg)";
+      icon1.style.transform = "rotate(0deg)";
     }else{
       setFirstMenu(false);
-      icon1.style.transform = "rotate(0deg)";
-    }
-  };
-  const showSecondMenu = () => {
-    let icon2 = document.getElementById("icon2");
-    if(secondMenu === false){
-      setSecondMenu(true);
-      icon2.style.transform = "rotate(180deg)";
-    }else{
-      setSecondMenu(false);
-      icon2.style.transform = "rotate(0deg)";
+      icon1.style.transform = "rotate(180deg)";
     }
   };
 
@@ -85,7 +70,7 @@ const SideBar = () => {
           ))}
         </div> : null}
         </div>
-        <div className="flex flex-col justify-between items-center h-full pb-6   px-6  w-full">
+        <div className="flex flex-col justify-between items-center h-full mt-5 pb-6   px-6  w-full">
           <div className=" flex justify-between items-center w-full">
             <div className="flex justify-center items-center  space-x-2">
               <div>

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const ButtonPrimary = ({ children, href = "" }) => (
   <Link
-    className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none  focus:text-indigo-400  text-white rounded "
+    className="flex justify-start items-center space-x-6 w-full  focus:outline-none  focus:text-indigo-400  text-white rounded "
     href={href}
   >
     {children}
@@ -45,6 +45,20 @@ export const ButtonSecondary = ({ children, href = ""}) => (
 );
 
 ButtonSecondary.propTypes = {
+    children: PropTypes.node.isRequired,
+    href: PropTypes.string
+};
+
+export const ButtonPage = ({ children, href = ""}) => (
+    <Link
+        className="flex justify-start items-center space-x-6 text-white focus:bg-sky-700 bg-sky-700 rounded px-3 py-2  w-full md:w-52"
+        href={href}
+    >
+        {children}
+    </Link>
+);
+
+ButtonPage.propTypes = {
     children: PropTypes.node.isRequired,
     href: PropTypes.string
 };

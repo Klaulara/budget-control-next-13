@@ -13,6 +13,17 @@ export const getListBudgets = async () => {
     });
 };
 
+export const getBudget = async (id) => {
+  return await axiosInternal
+    .get(budget_url + `/${id}`)
+    .then((res) => {
+      return res.data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
 export const addBudget = async (data) => {
   data.status = "active";
   return await axiosInternal
